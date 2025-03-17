@@ -1,13 +1,23 @@
 import React from "react";
+import Left from "../pan/left";
+import Right from "../pan/right";
+import Header from "../header/header";
+import Divider from "../component/divider";
 
 const Page = () => {
   return (
     <div className="flex min-h-screen">
-      {/* Left column with fixed width */}
-      <div className="w-[300px] bg-[rgba(21,21,23,255)] rounded-md  my-1"></div>
+      <div className="w-[300px] flex flex-col">
+        <Header />
+        <Divider />
+        <Left />
+      </div>
+      <div className="flex-1">
+        <Right />
+      </div>
 
-      {/* Right column taking remaining space */}
-      <div className="flex-1 bg-[rgba(21,21,23,255)] border-2 border-[rgba(27,27,29,255)] ml-2 rounded-4xl my-1"></div>
+      {/* <div className="w-[300px] bg-black_bg1 rounded-md  my-1"></div>
+      <div className="flex-1 bg-black_bg1 border-2 border-black_bord1 ml-2 mr-2 rounded-4xl my-3"></div> */}
     </div>
   );
 };

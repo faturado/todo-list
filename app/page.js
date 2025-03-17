@@ -1,11 +1,14 @@
 import React from "react";
 import Header from "./component/header";
-import Leftpane from "./base/page";
+import Base from "./base/page";
+import Add from "./component/add_button";
+import Pan1 from "./pan/left";
+import Pan2 from "./pan/right";
 
 const page = () => {
   return (
     <div>
-      <Leftpane />
+      <Base />
     </div>
   );
 };

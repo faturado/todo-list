@@ -10,12 +10,33 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-black_bg1: #151517;
+  --color-black_sec1: #1b1b1d;
+  --color-black_bord1: #1b1b1d;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #151517;
     --foreground: #edf4f6;
+  }
+}
+
+@layer components {
+  .modal-overlay {
+    @apply fixed inset-0 flex items-center justify-center bg-black/50;
+  }
+  .modal-card {
+    @apply bg-gray-900 p-6 rounded-lg shadow-lg w-80;
+  }
+  .modal-title {
+    @apply text-white text-lg font-semibold;
+  }
+  .modal-input {
+    @apply w-full mt-2 p-2 rounded bg-gray-800 text-white;
+  }
+  .modal-button {
+    @apply px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500;
   }
 }
 
