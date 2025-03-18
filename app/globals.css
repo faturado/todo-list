@@ -38,6 +38,10 @@
   .modal-button {
     @apply px-4 py-2 bg-blue-400 text-blue-950 rounded hover:bg-blue-300;
   }
+  .modal-login {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+           px-6 py-4 rounded-md w-100 h-100 border-2 border-black_bord1 bg-black_bg1 shadow-lg;
+  }
 
   /* Close Button */
   .modal-close-btn {
@@ -46,6 +50,18 @@
 
   .modal-close-icon {
     @apply w-6 h-6;
+  }
+  .card-wrapper {
+    @apply relative bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl;
+  }
+  .card-wrapper::before {
+    background: conic-gradient(
+      rgba(244, 144, 182, 0.4) 0deg,
+      rgba(192, 132, 252, 0.4) 0deg,
+      transparent 80deg
+    );
+
+    @apply absolute h-[100%] w-[100%] content-[''];
   }
 }
 
