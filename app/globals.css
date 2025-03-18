@@ -27,7 +27,7 @@
     @apply fixed inset-0 flex items-center justify-center bg-black/50;
   }
   .modal-card {
-    @apply bg-gray-900 p-6 rounded-lg shadow-lg w-80;
+    @apply bg-gray-900 p-6 rounded-lg shadow-lg w-80 relative;
   }
   .modal-title {
     @apply text-white text-lg font-semibold;
@@ -36,7 +36,16 @@
     @apply w-full mt-2 p-2 rounded bg-gray-800 text-white;
   }
   .modal-button {
-    @apply px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500;
+    @apply px-4 py-2 bg-blue-400 text-blue-950 rounded hover:bg-blue-300;
+  }
+
+  /* Close Button */
+  .modal-close-btn {
+    @apply absolute top-2 right-2 text-gray-400 hover:text-white p-1 rounded-lg transition duration-200;
+  }
+
+  .modal-close-icon {
+    @apply w-6 h-6;
   }
 }
 
