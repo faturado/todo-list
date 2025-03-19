@@ -1,7 +1,11 @@
 import React from "react";
 
-const add_button = () => {
-  return <div className="card-wrapper h-[200px] w-[200px]"></div>;
+const AddButton = () => {
+  return (
+    <div className="card-wrapper h-[200px] w-[200px] flex items-center justify-center">
+      <div className="card-content flex items-center justify-center"></div>
+    </div>
+  );
 };
 
-export default add_button;
+export default AddButton;

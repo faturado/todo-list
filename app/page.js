@@ -9,7 +9,7 @@ import Login from "./login/login";
 const Page = () => {
   return (
     <div>
-      <Add />
+      <Login />
     </div>
   );
 };

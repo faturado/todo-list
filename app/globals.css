@@ -33,7 +33,7 @@
     @apply text-white text-lg font-semibold;
   }
   .modal-input {
-    @apply w-full mt-2 p-2 rounded bg-gray-800 text-white;
+    @apply w-full mb-2 px-4 py-2  bg-gray-800 text-white;
   }
   .modal-button {
     @apply px-4 py-2 bg-blue-400 text-blue-950 rounded hover:bg-blue-300;
@@ -52,16 +52,44 @@
     @apply w-6 h-6;
   }
   .card-wrapper {
-    @apply relative bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl;
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl overflow-hidden flex justify-center items-center;
   }
+
+  @keyframes spin-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   .card-wrapper::before {
     background: conic-gradient(
-      rgba(244, 144, 182, 0.4) 0deg,
-      rgba(192, 132, 252, 0.4) 0deg,
+      rgba(211, 248, 0, 0.9) 0deg,
+      rgba(223, 253, 50, 0.9) 0deg,
+      rgba(238, 253, 150, 0.9) 0deg,
       transparent 80deg
     );
 
-    @apply absolute h-[100%] w-[100%] content-[''];
+    @apply absolute h-[150%] w-[150%] content-[''] 
+            rounded-2xl;
+
+    animation: spin-border 4s linear infinite;
+  }
+
+  .card-content {
+    /* background: radial-gradient(circle at bottom, #2e382e 10%, #50c9ce 100%); */
+    @apply relative flex flex-col items-center justify-start 
+             h-[calc(100%-2px)] w-[calc(100%-2px)] 
+             rounded-2xl p-4 bg-black_bg1;
+  }
+  .card-border {
+    @apply flex items-center justify-between w-full border-t border-gray-800;
+  }
+
+  .card-button {
+    @apply px-3 py-3 bg-blue-400 text-blue-950 rounded-full hover:bg-blue-300;
   }
 }
 
