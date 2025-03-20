@@ -91,6 +91,23 @@
   .card-button {
     @apply px-3 py-3 bg-blue-400 text-blue-950 rounded-full hover:bg-blue-300;
   }
+
+  @keyframes shooting {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(500px) translateY(-500px);
+      opacity: 0;
+    }
+  }
+
+  .animate-shooting {
+    animation: shooting 1s forwards; /* Adjust duration as needed */
+  }
 }
 
 body {
