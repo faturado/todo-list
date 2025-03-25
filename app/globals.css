@@ -100,13 +100,17 @@
       opacity: 1;
     }
     100% {
-      transform: translateX(500px) translateY(-500px);
+      transform: translateX(500px) translateY(500px);
       opacity: 0;
     }
   }
 
   .animate-shooting {
     animation: shooting 1s forwards; /* Adjust duration as needed */
+  }
+  .login-card {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+    rounded-2xl overflow-hidden flex flex-col p-6 items-start gap-4;
   }
 }
 

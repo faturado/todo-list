@@ -1,19 +1,18 @@
 import React from "react";
 import Left from "../pan/left";
-import Right from "../pan/right";
+import Body from "../pan/body";
 import Header from "../header/header";
 import Divider from "../component/divider";
 
 const Page = () => {
   return (
-    <div className="flex min-h-screen">
-      <div className="w-[300px] flex flex-col">
+    <div className="flex flex-col h-screen w-full">
+      <div className="w-full flex items-start justify-end">
         <Header />
-        <Divider />
-        <Left />
       </div>
-      <div className="flex-1">
-        <Right />
+      {/* Center Body */}
+      <div className="flex flex-1 items-center justify-center m-3 mb-10">
+        <Body />
       </div>
     </div>
   );
