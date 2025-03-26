@@ -114,6 +114,21 @@
   }
 }
 
+.note-card {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+         px-4 py-2 text-white rounded-lg shadow-lg;
+  background-color: rgba(var(--random-rgb), 0.8);
+  backdrop-filter: blur(10px);
+  white-space: nowrap; /* Adjust width dynamically */
+}
+
+@layer utilities {
+  .random-bg {
+    --random-rgb: #{floor(random() * 255)}, #{floor(random() * 255)},
+      #{floor(random() * 255)};
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
